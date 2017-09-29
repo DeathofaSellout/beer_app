@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: 'user'
 
   get '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#logout'
 end
