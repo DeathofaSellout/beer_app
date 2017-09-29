@@ -26,14 +26,14 @@
      <div class="row">
        <div class="input-field col s12">
          <!-- <input placeholder="Password" id="password" type="password" class="validate"> -->
-         <% f.password_field :password, placeholder: "Enter Password"%>
+         <%= f.password_field :password, placeholder: "Enter Password"%>
          <label for="password">Password</label>
        </div>
      </div>
      <div class="row">
        <div class="input-field col s12">
          <!-- <input id="birthday" type="email" class="validate"> -->
-         <% f.text_field :birthday, placeholder: "Enter Birthday"%>
+         <%= f.text_field :birthday, placeholder: "Enter Birthday"%>
          <label for="birthday">Birthday</label>
        </div>
      </div>
@@ -42,7 +42,8 @@
  </div>
  <div class="modal-footer">
    <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
-   <a class="modal-action modal-close waves-effect waves-green btn-flat">Create Account</a>
+  <!--  <a href="/users" class="modal-action modal-close waves-effect waves-green btn-flat">Create Account</a> -->
+    <%= f.submit "Save", class: "btn btn-primary" %>
  </div>
 </div>
 <%end%>
