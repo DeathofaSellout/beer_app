@@ -43,7 +43,7 @@
  <div class="modal-footer">
    <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
   <!--  <a href="/users" class="modal-action modal-close waves-effect waves-green btn-flat">Create Account</a> -->
-    <%= f.submit "Save", class: "btn btn-primary" %>
+    <%= f.submit "Save", class: "btn-flat"%>
  </div>
 </div>
 <%end%>
@@ -60,24 +60,28 @@
 <!-- Modal Structure -->
 <div id="modal_login" class="modal modal-fixed-footer">
  <div class="modal-content">
-   <h4>Modal Header</h4>
-   <p>A bunch of text</p>
+
+<% @user=User.new %> 
+<%= form_for @user, url: '/login', method: 'get' do |f| %>
    <div class="row">
      <div class="input-field col s12">
-       <input placeholder="Email" id="email" type="text" class="validate">
+     <%= f.email_field :email, placeholder: "Email" %>
        <label for="email">Email</label>
      </div>
    </div>
    <div class="row">
      <div class="input-field col s12">
-       <input placeholder="Password" id="password" type="password" class="validate">
+     <%= f.password_field :password, placeholder: "Password" %>
        <label for="password">Password</label>
      </div>
    </div>
  </div>
  <div class="modal-footer">
    <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
-   <a class="modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+<%= f.submit "Login", class: "btn-flat" %> 
+  <!--  <a class="modal-action modal-close waves-effect waves-green btn-flat">Login</a> -->
  </div>
+ <% end %>
 </div>
+
 <!-- Login Modal End-->
