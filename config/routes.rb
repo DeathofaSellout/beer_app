@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#logout'
+
+  get '/beers', to: 'beers#index', as: 'beers'
 end
