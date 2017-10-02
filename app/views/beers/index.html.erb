@@ -1,18 +1,5 @@
 <%= render "shared/nav" %>
 
-<!-- <div class="beer_list">
-  <% @Beers.each do |b| %>
-  <div class="beer">
-    <%= b.name%>
-    <%= b.style%>
-    <%= b.brewery%>
-    <%= b.country%>
-    <%= b.ibu%>
-    <%= b.abv%>
-    <%= image_tag(b.image, :class => "beer_image") %>
-  </div>
-  <% end %>
-</div> -->
 <div class="col s12 m7">
   <% @Beers.each do |b| %>
     <div class="card horizontal beer">
