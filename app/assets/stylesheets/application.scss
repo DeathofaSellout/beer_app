@@ -14,7 +14,7 @@
  *= require_self
  */
  @import "materialize";
- 
+
 body {
   background-image: url("Beer.jpg");
 }
@@ -27,6 +27,6 @@ body {
   color: white;
   margin: 100px 100px 100px 100px;
 }
-.beer_image {
-  width: 200px;
+.card.horizontal .card-image img  {
+  max-width: 200px;
 }

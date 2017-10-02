@@ -17,9 +17,10 @@
 
 <!-- Sign Up Modal -->
 <div id="modal_signup" class="modal modal-fixed-footer">
+  <%= form_for @user do |f| %>
   <div class="modal-content">
     <div class="row">
-      <%= form_for @user do |f| %>
+
       <!-- <form class="col s12"> -->
       <div class="row">
         <div class="input-field col s12">
@@ -52,16 +53,18 @@
     <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
     <%= f.submit "Save", class: "btn-flat"%>
   </div>
+  <%end%>
 </div>
-<%end%>
+
 <!-- Signup Modal End-->
 
 <!-- Login Modal -->
 <div id="modal_login" class="modal modal-fixed-footer">
+  <% @user=User.new %>
+  <%= form_for @user, url: '/login', method: 'get' do |f| %>
   <div class="modal-content">
 
-    <% @user=User.new %>
-    <%= form_for @user, url: '/login', method: 'get' do |f| %>
+
     <div class="row">
       <div class="input-field col s12">
         <%= f.email_field :email, placeholder: "Email" %>
