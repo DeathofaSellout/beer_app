@@ -1,4 +1,5 @@
 
+
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
@@ -10,12 +11,88 @@
 
 
 
+
 <div>
 
-		<h1>Hi <%= @user.name %>!</h1>
+	
+  <h1>Hi <%= @user.name %>!</h1>
 
 </div>
 
-<div class="beer-list">
+<!-- <div class="beer-list">
+	
+</div> -->
+
+
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn modal-trigger" href="#modal3">Modal</a>
+
+<!-- Modal Structure -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+
+   <%= form_for @beer, :id=>"beer-form", :class=> "col s12" do |f| %>
+   <div class="row">
+    <div class="input-field col s12">
+
+      <%= f.text_field :style %>
+      <%= f.label :style %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+     <%= f.text_field :brewery %>
+     <%= f.label :brewery %>
+   </div>
+ </div>
+ <div class="row">
+  <div class="input-field col s12">
+
+    <%= f.text_field :country %>
+    <%= f.label :country %>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col s12">
+    This is an inline input field:
+    <div class="input-field inline">
+      <%= f.text_field :ibu %>
+      <%= f.label :ibu %>
+    </div>
+    <div class="input-field inline">
+     <%= f.text_field :abv %>
+     <%= f.label :abv %>
+   </div>
+   <div class="input-field inline">
+     <%= f.text_field :image %>
+     <%= f.label :image %>
+   </div>
+   <div class="modal-footer">
+  <%= f.submit "submit", :class=> "btn-flat" %>
+</div>
+ </div>
+</div>
+
+</div>
+
+</div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="beer_list">
+
 
 </div>

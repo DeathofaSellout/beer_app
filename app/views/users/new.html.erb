@@ -59,6 +59,7 @@
 <!-- Login Modal -->
 <div id="modal_login" class="modal modal-fixed-footer">
   <div class="modal-content">
+
     <% @user=User.new %>
     <%= form_for @user, url: '/login', method: 'get' do |f| %>
     <div class="row">
@@ -77,6 +78,9 @@
   <div class="modal-footer">
     <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
     <%= f.submit "Login", class: "btn-flat" %>
+
+    <!--  <a class="modal-action modal-close waves-effect waves-green btn-flat">Login</a> -->
+
   </div>
   <% end %>
 </div>

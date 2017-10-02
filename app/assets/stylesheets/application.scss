@@ -14,10 +14,19 @@
  *= require_self
  */
  @import "materialize";
+ 
 body {
   background-image: url("Beer.jpg");
 }
 
 .nav-wrapper {
 	background-color: #fcc43b
+}
+.beer {
+  background-color: black;
+  color: white;
+  margin: 100px 100px 100px 100px;
+}
+.beer_image {
+  width: 200px;
 }
