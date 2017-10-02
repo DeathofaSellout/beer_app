@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
 
 
-  post '/beers', to: 'beers#create', 
-  get '/beers', to: 'beers#index', as: 'beers'
+  post '/beers', to: 'beers#create'
+  get '/beers', to: 'beers#index'
   # get '/beers/:id', to: 'beers#show', as: 'beer'
 
 
