@@ -1,3 +1,4 @@
+
 <nav>
   <div class="nav-wrapper">
     <a href="#!" class="brand-logo">Logo</a>
@@ -30,3 +31,44 @@
 	<%= beer.image %>
 
 <% end %>
+
+<%= render "shared/nav" %>
+
+<!-- <div class="beer_list">
+  <% @Beers.each do |b| %>
+  <div class="beer">
+    <%= b.name%>
+    <%= b.style%>
+    <%= b.brewery%>
+    <%= b.country%>
+    <%= b.ibu%>
+    <%= b.abv%>
+    <%= image_tag(b.image, :class => "beer_image") %>
+  </div>
+  <% end %>
+</div> -->
+<div class="col s12 m7">
+  <% @Beers.each do |b| %>
+    <div class="card horizontal">
+      <div class="card-image beer_image">
+        <%= image_tag(b.image, :class => "beer_image") %>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <ul>
+            <li><%= b.name%></li>
+            <li><%= b.style%></li>
+            <li><%= b.brewery%></li>
+            <li><%= b.country%></li>
+            <li><%= b.ibu%></li>
+            <li><%= b.abv%></li>
+          </ul>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

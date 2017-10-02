@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   def index
-
   end
-
 
   def create
     @user = User.new(user_params)
@@ -10,7 +8,7 @@ class UsersController < ApplicationController
       redirect_to user_path(@user)
     else
       redirect_to root_path
-    end 
+    end
   end
 
 
@@ -21,9 +19,9 @@ class UsersController < ApplicationController
   def show
     id = params[:id]
     @user = User.find_by_id(id)
+
     @beer = Beer.new 
   end 
-
 
   private
 
@@ -32,5 +30,4 @@ class UsersController < ApplicationController
   end
 
 
-  
 end

@@ -59,29 +59,28 @@
 <a class="waves-effect waves-light btn modal-trigger" href="#modal_login">Login</a>
 <!-- Modal Structure -->
 <div id="modal_login" class="modal modal-fixed-footer">
- <div class="modal-content">
-
-<% @user=User.new %> 
-<%= form_for @user, url: '/login', method: 'get' do |f| %>
-   <div class="row">
-     <div class="input-field col s12">
-     <%= f.email_field :email, placeholder: "Email" %>
-       <label for="email">Email</label>
-     </div>
-   </div>
-   <div class="row">
-     <div class="input-field col s12">
-     <%= f.password_field :password, placeholder: "Password" %>
-       <label for="password">Password</label>
-     </div>
-   </div>
- </div>
- <div class="modal-footer">
-   <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
-<%= f.submit "Login", class: "btn-flat" %> 
-  <!--  <a class="modal-action modal-close waves-effect waves-green btn-flat">Login</a> -->
- </div>
- <% end %>
+  <div class="modal-content">
+  <% @user=User.new %>
+  <%= form_for @user, url: '/login', method: 'get' do |f| %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.email_field :email, placeholder: "Email" %>
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.password_field :password, placeholder: "Password" %>
+        <label for="password">Password</label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+    <%= f.submit "Login", class: "btn-flat" %>
+    <!--  <a class="modal-action modal-close waves-effect waves-green btn-flat">Login</a> -->
+  </div>
+  <% end %>
 </div>
 
 <!-- Login Modal End-->
