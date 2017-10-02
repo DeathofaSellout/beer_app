@@ -8,7 +8,7 @@
 
 Beer.destroy_all
 User.destroy_all
-Rating.destroy_all
+# Rating.destroy_all
 
 beer_data = [
   {
@@ -20,7 +20,7 @@ beer_data = [
     abv: 6.2,
     image: "http://www.mybeercollectibles.com/uploads/Zombie-Dust.jpg"
 
-  }
+  },
   {
     name: "White",
     style: "Witbier",
@@ -30,7 +30,7 @@ beer_data = [
     abv: 5.1,
     image: "http://www.monthlyclubs.com/media/catalog/product/cache/12/image/9df78eab33525d08d6e5fb8d27136e95/a/l/allagash-white-beer.jpg"
 
-  }
+  },
   {
     name: "Punkin Ale",
     style: "Pumpkin Ale",
@@ -40,7 +40,7 @@ beer_data = [
     abv: 7,
     image: "http://www.newschoolbeer.com/wp-content/uploads/2017/08/Punkin-Ale.Carobock.jpg"
 
-  }
+  },
   {
     name: "Franziskaner Hefe-Weisse",
     style: "Hefeweizen",
@@ -50,25 +50,25 @@ beer_data = [
     abv: 5,
     image: "http://www.bevmo.com/media/catalog/product//1/5/15164.jpg"
 
-  }
+  },
 ]
 beers = Beer.create(beer_data)
 
 user_data = []
 3.times do
   user_data << {
-    name: FFaker::Name.name
+    name: FFaker::Name.name,
     email: FFaker::Internet.email,
     password: "1234",
-    birthday: FFaker::Time.date
+    birthday: FFaker::Time.date,
   }
 end
 users = User.create(user_data)
 
-rating_data = []
-4.times do
- rating_data << {
-   score: 1 + rand(5)
- }
-end
-ratings = Rating.create(rating_data)
+# rating_data = []
+# 4.times do
+#  rating_data << {
+#    score: 1 + rand(5)
+#  }
+# end
+# ratings = Rating.create(rating_data)
