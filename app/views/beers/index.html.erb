@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= render "shared/nav" %>
 
 <div class="container">
@@ -6,10 +7,28 @@
     <% @beers.each do |b| %>
     <div class="card horizontal">
       <div class="card-image">
+=======
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><%= link_to "Log out", logout_path, class: "btn-flat" %></li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="col s12 m7">
+  <% @beers.each do |b| %>
+    <div class="card horizontal">
+      <div class="card-image beer_image">
+>>>>>>> 64addbc6705bbdbad1dcf7807df84cf488140b66
         <%= image_tag(b.image, :class => "beer_image") %>
       </div>
       <div class="card-stacked">
         <div class="card-content">
+<<<<<<< HEAD
           <h2><%= b.name%></h2>
           <h5>Brewed by: <%= b.brewery%></h5>
           <p>Style: <%= b.style%></p>
@@ -25,4 +44,21 @@
   </div>
 
 </div>
+=======
+          <ul>
+            <li><%= b.name%></li>
+            <li><%= b.style%></li>
+            <li><%= b.brewery%></li>
+            <li><%= b.country%></li>
+            <li><%= b.ibu%></li>
+            <li><%= b.abv%></li>
+          </ul>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+>>>>>>> 64addbc6705bbdbad1dcf7807df84cf488140b66
 </div>
