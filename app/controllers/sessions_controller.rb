@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
     @user = User.new
   end
@@ -12,6 +13,12 @@ class SessionsController < ApplicationController
   	else
   		redirect_to root_path
   end 
+end 
+
+def destroy
+	@user=User.find_by_id(params[:id])
+	logout(@user)
+	redirect_to root_path
 end 
 
 end
