@@ -1,5 +1,6 @@
 class BeersController < ApplicationController
 
+
 	def create
 	  @beer = Beer.new(validate_beer)
 	  if @beer.save

@@ -1,21 +1,10 @@
 
 <nav>
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Logo</a>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
-      <li><%= link_to "Log out", logout_path, class: "btn-flat" %></li> 
-    </ul>
-    <ul class="side-nav" id="mobile-demo">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
-      <li><%= link_to "Log out", logout_path, class: "btn-flat" %></li> 
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><%= link_to "Log out", logout_path, class: "btn-flat" %></li>
+
     </ul>
   </div>
 </nav>
@@ -70,5 +59,28 @@
       </div>
     </div>
   <% end %>
+</div>
+
+<div class="container">
+  <div class="col s12 m7">
+    <h2 class="header">Top Beers</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="http://placecage.com/c/155/305">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h2>Budweiser</h2>
+          <h5>Anheuser-Busch</h5>
+          <p>Lager</p>
+          <p>12 IBU   5% ABV</p>
+          <p>USA</p>
+        </div>
+        <div class="card-action">
+          <a href="#">More Information</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

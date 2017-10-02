@@ -1,67 +1,67 @@
-<!-- <%= image_tag('Beer.jpg', class: "homepage_img", alt: "Beer") %> -->
+<div class="container">
+  <div class="row">
+    <div class="col s6 offset-s3 hello">
+      <div class="section">
+        <h1> Growlr</h1>
+        <h4>No Crap On Tap!</h4>
+      </div>
+      <div class="section">
+        <!-- Signup Modal Button -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal_signup">Sign Up!</a>
+        <!-- Login Modal Button -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal_login">Login</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- Signup Modal -->
-<a class="waves-effect waves-light btn modal-trigger" href="#modal_signup">Sign Up!</a>
-<!-- Modal Structure -->
+<!-- Sign Up Modal -->
 <div id="modal_signup" class="modal modal-fixed-footer">
- <div class="modal-content">
-   <div class="row">
-     <%= form_for @user do |f| %>
-   <!-- <form class="col s12"> -->
-     <div class="row">
-       <div class="input-field col s12">
-         <!-- <input placeholder="Enter Name" id="name" type="text" class="validate"> -->
-         <%= f.text_field :name, placeholder: "Enter Name"%>
-         <label for="name">Enter First and Last Name</label>
-       </div>
-
-     </div>
-     <div class="row">
-       <div class="input-field col s12">
-         <!-- <input placeholder="Email" id="email" type="text" class="validate"> -->
-         <%= f.text_field :email, placeholder: "Enter Email"%>
-         <label for="email">Email</label>
-       </div>
-     </div>
-     <div class="row">
-       <div class="input-field col s12">
-         <!-- <input placeholder="Password" id="password" type="password" class="validate"> -->
-         <%= f.password_field :password, placeholder: "Enter Password"%>
-         <label for="password">Password</label>
-       </div>
-     </div>
-     <div class="row">
-       <div class="input-field col s12">
-         <!-- <input id="birthday" type="email" class="validate"> -->
-         <%= f.text_field :birthday, placeholder: "Enter Birthday"%>
-         <label for="birthday">Birthday</label>
-       </div>
-     </div>
-   <!-- </form> -->
- </div>
- </div>
- <div class="modal-footer">
-   <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
-  <!--  <a href="/users" class="modal-action modal-close waves-effect waves-green btn-flat">Create Account</a> -->
+  <div class="modal-content">
+    <div class="row">
+      <%= form_for @user do |f| %>
+      <!-- <form class="col s12"> -->
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :name, placeholder: "Enter Name"%>
+          <label for="name">Enter First and Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :email, placeholder: "Enter Email"%>
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.password_field :password, placeholder: "Enter Password"%>
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :birthday, placeholder: "Enter Birthday"%>
+          <label for="birthday">Birthday</label>
+        </div>
+      </div>
+      <!-- </form> -->
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
     <%= f.submit "Save", class: "btn-flat"%>
- </div>
+  </div>
 </div>
 <%end%>
 <!-- Signup Modal End-->
 
-
-
-
-
-
-
 <!-- Login Modal -->
-<a class="waves-effect waves-light btn modal-trigger" href="#modal_login">Login</a>
-<!-- Modal Structure -->
 <div id="modal_login" class="modal modal-fixed-footer">
   <div class="modal-content">
-  <% @user=User.new %>
-  <%= form_for @user, url: '/login', method: 'get' do |f| %>
+
+    <% @user=User.new %>
+    <%= form_for @user, url: '/login', method: 'get' do |f| %>
     <div class="row">
       <div class="input-field col s12">
         <%= f.email_field :email, placeholder: "Email" %>
@@ -78,9 +78,10 @@
   <div class="modal-footer">
     <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
     <%= f.submit "Login", class: "btn-flat" %>
+
     <!--  <a class="modal-action modal-close waves-effect waves-green btn-flat">Login</a> -->
+
   </div>
   <% end %>
 </div>
-
 <!-- Login Modal End-->

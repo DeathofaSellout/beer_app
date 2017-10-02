@@ -10,8 +10,10 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#logout'
 
 
+
   post '/beers', to: 'beers#create', 
   get '/beers', to: 'beers#index', as: 'beers'
   # get '/beers/:id', to: 'beers#show', as: 'beer'
+
 
 end
