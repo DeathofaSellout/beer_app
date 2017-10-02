@@ -1,13 +1,23 @@
 class BeersController < ApplicationController
-  def index
-    @Beers = Beer.all
-  end
-  def new
-    @beer = Beer.new(beer_params)
-  end
 
-  def create
 
-  end
+	def create
+	  @beer = Beer.new(validate_beer)
+	  if @beer.save
+		  redirect_to '/beers'
+	  end 
+	end 
+
+	def index
+		@beers = Beer.all
+	end 
+
+
+	private 
+
+	def validate_beer
+    	params.require(:beer).permit(:name, :style, :brewery, :country, :ibu, :abv, :image)
+  end 
+
 
 end

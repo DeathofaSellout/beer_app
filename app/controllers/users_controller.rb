@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
   end
-  
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     end
   end
 
+
   def new
     @user = User.new
   end
@@ -18,12 +19,15 @@ class UsersController < ApplicationController
   def show
     id = params[:id]
     @user = User.find_by_id(id)
-  end
+
+    @beer = Beer.new 
+  end 
 
   private
 
   def user_params
     params.require(:user).permit(:email,:name,:password,:birthday)
   end
+
 
 end
