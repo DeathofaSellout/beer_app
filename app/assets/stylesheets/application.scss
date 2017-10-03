@@ -18,7 +18,6 @@
 body {
   background-image: url("Beer.jpg");
 }
-
 .nav-wrapper {
 	background-color: #fcc43b;
 }
@@ -27,15 +26,16 @@ body {
   color: white;
   width: 80%;
 }
-.card.horizontal .card-image img  {
+.card.horizontal .card-image img {
   max-width: 200px;
 }
-.search{
+.search {
   background-color: #fcc43b;
 }
-.main{
+.main {
   margin-top: 200px;
 }
+
 .brand-logo{
   color: white;
 }
@@ -51,4 +51,19 @@ body {
   text-align: center;
   margin-top: 15%;
   border: white 1px solid;
+}
+.profile {
+  margin: auto;
+  max-width: 80%;
+  background-color: white;
+  opacity: 0.75;
+  border-radius: 30px;
+  text-align: center;
+}
+.dude{
+  margin-left: 43%;
+  margin-right: 43%;
+}
+.sick {
+  color: blue;
 }

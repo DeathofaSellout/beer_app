@@ -1,0 +1,35 @@
+<a class="waves-effect waves-light btn modal-trigger dude" href="#modal3">Edit User Info</a>
+
+<div id="modal3" class="modal sick">
+  <div class="modal-content">
+    <%= form_for @user, :class=> "col s12" do |f| %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_field :name %>
+        <%= f.label :name, :class=> "active" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+       <%= f.text_field :email %>
+       <%= f.label :email, :class=> "active" %>
+     </div>
+   </div>
+   <div class="row">
+     <div class="input-field col s12">
+       <%= f.text_field :password %>
+       <%= f.label :password, :class=> "active" %>
+     </div>
+   </div>
+   <div class="row">
+     <div class="input-field col s12">
+       <%= f.text_field :birthday %>
+       <%= f.label :birthday, :class=> "active" %>
+     </div>
+   </div>
+    <div class="modal-footer">
+      <%= f.submit "submit", :class=> "btn-flat" %>
+    </div>
+    <% end %>
+  </div>
+</div>
