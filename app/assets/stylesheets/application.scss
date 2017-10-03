@@ -18,23 +18,28 @@
 body {
   background-image: url("Beer.jpg");
 }
-
 .nav-wrapper {
 	background-color: #fcc43b;
 }
 .beer {
   background-color: black;
   color: white;
-  // margin: 100px 100px 100px 100px;
   width: 80%;
-
 }
-.card.horizontal .card-image img  {
+.card.horizontal .card-image img {
   max-width: 200px;
 }
-.search{
+.search {
   background-color: #fcc43b;
 }
-.main{
+.main {
   margin-top: 200px;
+}
+.profile {
+  margin: auto;
+  max-width: 80%;
+  background-color: white;
+  opacity: 0.75;
+  border-radius: 30px;
+  text-align: center;
 }

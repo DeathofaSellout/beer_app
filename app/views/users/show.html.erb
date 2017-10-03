@@ -1,5 +1,9 @@
 <%= render "shared/nav" %>
 
-<div>
-  <h1>Hi <%= @user.name %>!</h1>
+<div class="profile">
+  <h1>Hey <%= @user.name %>!</h1>
+  <h3>Email: <%= @user.email %></h3>
+  <h3>Birthday: <%= @user.birthday %></h3>
 </div>
+
+<%= render "shared/edit" %>
