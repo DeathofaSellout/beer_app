@@ -1,0 +1,9 @@
+<div class="search">
+  <%= search_form_for @q do |f| %>
+
+    <%= f.label :name_or_style_or_brewery_or_country_cont %>
+    <%= f.search_field :name_or_style_or_brewery_or_country_cont %>
+
+    <%= f.submit %>
+  <% end %>
+<div>
