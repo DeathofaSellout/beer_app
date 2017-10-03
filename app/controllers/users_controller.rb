@@ -20,8 +20,8 @@ class UsersController < ApplicationController
     id = params[:id]
     @user = User.find_by_id(id)
 
-    @beer = Beer.new 
-  end 
+    # @beer = Beer.new 
+  end
 
   private
 

@@ -3,6 +3,7 @@ class BeersController < ApplicationController
 	def index
 	  @q = Beer.ransack(params[:q])
 	  @beers = @q.result(distinct: true)
+		@beer = Beer.new
   end
 	def create
 	  @beer = Beer.new(validate_beer)
@@ -10,12 +11,7 @@ class BeersController < ApplicationController
 		  redirect_to '/beers'
 	  end
 	end
-
-	# def index
-	# 	@beers = Beer.all
-	# end
-
-
+  
 	private
 
 	def validate_beer
