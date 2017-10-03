@@ -1,7 +1,12 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <a href="#" class="brand-logo left">Logo</a>
+    <ul id="nav-mobile" class="right">
+      <%if current_page?("/beers")%>
+        <li><%= link_to "Profile Page", user_path(current_user[:id]), class: "btn-flat" %></li>
+      <%else%>
+        <li><%= link_to "Top Beers", beers_path, class: "btn-flat" %></li>
+      <%end%>
       <li><%= link_to "Log out", logout_path, class: "btn-flat" %></li>
     </ul>
   </div>

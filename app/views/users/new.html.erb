@@ -17,31 +17,32 @@
 
 <!-- Sign Up Modal -->
 <div id="modal_signup" class="modal modal-fixed-footer">
+  <%= form_for @user do |f| %>
   <div class="modal-content">
     <div class="row">
-      <%= form_for @user do |f| %>
+
       <!-- <form class="col s12"> -->
       <div class="row">
         <div class="input-field col s12">
-          <%= f.text_field :name, placeholder: "Enter Name"%>
+          <%= f.text_field :name%>
           <label for="name">Enter First and Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <%= f.text_field :email, placeholder: "Enter Email"%>
+          <%= f.text_field :email%>
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <%= f.password_field :password, placeholder: "Enter Password"%>
+          <%= f.password_field :password%>
           <label for="password">Password</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <%= f.text_field :birthday, placeholder: "Enter Birthday"%>
+          <%= f.text_field :birthday%>
           <label for="birthday">Birthday</label>
         </div>
       </div>
@@ -52,16 +53,18 @@
     <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
     <%= f.submit "Save", class: "btn-flat"%>
   </div>
+  <%end%>
 </div>
-<%end%>
+
 <!-- Signup Modal End-->
 
 <!-- Login Modal -->
 <div id="modal_login" class="modal modal-fixed-footer">
+  <% @user=User.new %>
+  <%= form_for @user, url: '/login', method: 'get' do |f| %>
   <div class="modal-content">
 
-    <% @user=User.new %>
-    <%= form_for @user, url: '/login', method: 'get' do |f| %>
+
     <div class="row">
       <div class="input-field col s12">
         <%= f.email_field :email, placeholder: "Email" %>
