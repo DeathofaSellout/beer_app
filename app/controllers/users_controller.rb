@@ -10,7 +10,11 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
   end
-
+  def update
+    @user = User.find_by_id(session[:user_id])
+    @user.update_attributes(user_params)
+    redirect_to user_path(@user)
+  end
 
   def new
     @user = User.new
