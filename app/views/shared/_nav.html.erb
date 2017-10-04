@@ -7,9 +7,9 @@
       <%if current_page?("/beers")%>
         <li><%= link_to "Profile Page", user_path(current_user[:id]), class: "btn-flat" %></li>
       <%else%>
-        <li><%= link_to "Top Beers", beers_path, class: "btn-flat" %></li>
+        <li><%= link_to "Search For Beers", beers_path, class: "btn-flat" %></li>
       <%end%>
-      <li><%= link_to "Log out", logout_path, class: "btn-flat" %></li>
+      <li><%= link_to "Log Out", logout_path, class: "btn-flat" %></li>
     </ul>
   </div>
 </nav>
