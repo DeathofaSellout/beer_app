@@ -10,23 +10,28 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
   end
+
+
   def update
     @user = User.find_by_id(session[:user_id])
-    @user.update_attributes(user_params)
+    @user.update_attributes(email: user_params[:email], name: user_params[:name], birthday: user_params[:birthday])
     redirect_to user_path(@user)
   end
+
 
   def new
     @user = User.new
   end
 
   def show
-    id = params[:id]
+    id = params[:id]   
     @user = User.find_by_id(id)
-    if (@user.id != session[:user_id])
+    if(@user.id != session[:user_id])
       fail
-    end
+    end 
+    
   end
+
 
   private
 

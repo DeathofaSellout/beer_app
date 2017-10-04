@@ -1,9 +1,16 @@
 class User < ApplicationRecord
+	 # t.string "name"
+  #   t.string "email"
+  #   t.string "password_digest"
+  #   t.string "birthday"
 	has_many :ratings, dependent: :destroy
 	has_secure_password
-	# validates :name, presence: true
-  # validates :password, presence: true
-	# validates :email, presence: true
+	validates :email, uniqueness: true
+  	validates :password, presence: true
+	# validates :name length: { minimum: 1, maximum: 200 }
+	# validates :email length: { minimum: 1, maximum: 200 }
+	# validates :password length: { minimum: 1, maximum: 200 }
+	# validates :birthday length: { minimum: 1, maximum: 200 }
 
 	# has_many :ratings, dependent: :destroy
 

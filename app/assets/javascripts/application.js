@@ -20,5 +20,6 @@ $(document).ready(function(){
   $('.modal').modal();
   console.log("$modal", $('.modal'))
   //$(".button-collapse").sideNav()
+	
 
 })

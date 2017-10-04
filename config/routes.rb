@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   patch  '/users/:id', to: 'users#update'
 
   get    '/login', to: 'sessions#create'
-  get    '/logout', to: 'sessions#logout'
+  get    '/logout', to: 'sessions#destroy'
 
   post   '/beers', to: 'beers#create'
   get    '/beers', to: 'beers#index'
