@@ -7,3 +7,33 @@
 </div>
 
 <%= render "shared/edit" %>
+<div class="main">
+  <div class="container">
+    <div class="col s12 m7">
+    <% @beers.each do |b| %>
+    <div class="card horizontal">
+      <div class="card-image">
+        <%= image_tag(b.image, :class => "beer_image") %>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h2><%= b.name%></h2>
+          <h5>Brewed by: <%= b.brewery%></h5>
+          <p>Style: <%= b.style%></p>
+          <p><%= b.ibu%> IBUs <%= b.abv%>% ABV</p>
+          <p><%= b.country%></p>
+        </div>
+        <div class="row">
+          <div class="small-2 large-4 columns">
+            <% if current_user %>
+            Growlr Score: <%= rating_for b, "score", disable_after_rate: false %>
+            Your Score: <%= rating_for_user b, current_user, "score", stars: 10, disable_after_rate: false  %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>

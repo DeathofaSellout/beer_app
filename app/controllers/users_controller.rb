@@ -21,8 +21,8 @@ class UsersController < ApplicationController
   def show
     id = params[:id]
     @user = User.find_by_id(id)
+    @beers = Beer.all
     if(@user.id != session[:user_id])
-      fail
     end
   end
 
