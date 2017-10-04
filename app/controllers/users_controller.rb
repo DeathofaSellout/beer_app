@@ -29,6 +29,7 @@ class UsersController < ApplicationController
     if(@user.id != session[:user_id])
       fail
     end 
+    
   end
 
 
