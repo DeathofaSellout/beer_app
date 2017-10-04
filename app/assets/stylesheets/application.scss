@@ -30,10 +30,9 @@ body {
   max-width: 200px;
 }
 .search {
-  background-color: #fcc43b;
-}
-.main {
-  margin-top: 200px;
+  background-color: white;
+  opacity: .65;
+  color: black;
 }
 
 .brand-logo{
@@ -66,4 +65,16 @@ body {
 }
 .sick {
   color: blue;
+}
+.add{
+  margin-left: 40%;
+  margin-top: 10px;
+}
+.header {
+  max-width: 90%;
+  background-color: #fcc43b;
+  opacity: 0.90;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 5%;
 }

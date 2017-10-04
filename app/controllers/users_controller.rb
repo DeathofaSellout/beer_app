@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  def index
-  end
 
   def create
     @user = User.new(user_params)
@@ -23,7 +21,7 @@ class UsersController < ApplicationController
   def show
     id = params[:id]
     @user = User.find_by_id(id)
-    if (@user.id != session[:user_id])
+    if(@user.id != session[:user_id])
       fail
     end
   end

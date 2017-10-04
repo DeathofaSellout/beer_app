@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Beer.destroy_all
-User.destroy_all
-# Rating.destroy_all
+
+
 
 beer_data = [
   {
@@ -54,21 +54,5 @@ beer_data = [
 ]
 beers = Beer.create(beer_data)
 
-user_data = []
-3.times do
-  user_data << {
-    name: FFaker::Name.name,
-    email: FFaker::Internet.email,
-    password: "1234",
-    birthday: FFaker::Time.date,
-  }
-end
-users = User.create(user_data)
 
-# rating_data = []
-# 4.times do
-#  rating_data << {
-#    score: 1 + rand(5),
-#  }
-# end
-# ratings = Rating.create(rating_data)
+
