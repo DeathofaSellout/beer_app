@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 	has_many :ratings, dependent: :destroy
 	has_secure_password
+	ratyrate_rater
 	# validates :name, presence: true
   # validates :password, presence: true
 	# validates :email, presence: true
