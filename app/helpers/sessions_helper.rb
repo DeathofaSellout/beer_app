@@ -10,7 +10,7 @@ module SessionsHelper
 	end
 
 	def logout
-		@current_user = session[:id] = nil
+		# @current_user = session[:id] = nil
 		redirect_to root_path
 	end
 

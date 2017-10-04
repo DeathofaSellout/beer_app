@@ -16,8 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  	@user=User.find_by_id(params[:id])
-  	logout(@user)
+  	session[:user_id] = nil
   	redirect_to root_path
   end
 
