@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     @user = User.find_by_id(id)
     @beers = Beer.all
     if(@user.id != session[:user_id])
+
     end
   end
 
