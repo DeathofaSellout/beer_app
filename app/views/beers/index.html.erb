@@ -19,8 +19,13 @@
             <p><%= b.ibu%> IBUs <%= b.abv%>% ABV</p>
             <p><%= b.country%></p>
           </div>
-          <div class="card-action">
-            <a href="#">More Information</a>
+          <div class="row">
+            <div class="small-2 large-4 columns">
+              <% if current_user %>
+                Growlr Score: <%= rating_for b, "score", disable_after_rate: false %>
+                Your Score: <%= rating_for_user b, current_user, "score", stars: 10, disable_after_rate: false  %>
+              <% end %>
+            </div>
           </div>
           <h1 class="testingTest">star1</h1>
         </div>
