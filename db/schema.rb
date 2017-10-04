@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20171004173520) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +62,7 @@ ActiveRecord::Schema.define(version: 20171004173520) do
     t.index ["rater_id"], name: "index_rates_on_rater_id"
   end
 
+
   create_table "rating_caches", force: :cascade do |t|
     t.string "cacheable_type"
     t.bigint "cacheable_id"
@@ -70,16 +73,17 @@ ActiveRecord::Schema.define(version: 20171004173520) do
     t.datetime "updated_at", null: false
     t.index ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
     t.index ["cacheable_type", "cacheable_id"], name: "index_rating_caches_on_cacheable_type_and_cacheable_id"
+
   end
 
   create_table "ratings", force: :cascade do |t|
     t.decimal "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id"
-    t.bigint "beers_id"
-    t.index ["beers_id"], name: "index_ratings_on_beers_id"
-    t.index ["users_id"], name: "index_ratings_on_users_id"
+    t.bigint "user_id"
+    t.bigint "beer_id"
+    t.index ["beer_id"], name: "index_ratings_on_beer_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
