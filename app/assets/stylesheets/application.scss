@@ -16,7 +16,9 @@
  @import "materialize";
 
 body {
-  background-image: url("Beer.jpg");
+  background: url("Beer.jpg") no-repeat center center fixed;
+  
+
 }
 .nav-wrapper {
 	background-color: #fcc43b;
@@ -27,7 +29,8 @@ body {
   width: 80%;
 }
 .card.horizontal .card-image img {
-  max-width: 200px;
+
+  max-width: 80%;
 }
 .search {
   background-color: white;
@@ -73,8 +76,9 @@ body {
 .header {
   max-width: 90%;
   background-color: #fcc43b;
-  opacity: 0.90;
-  border-radius: 10px;
+  // opacity: 0.90;
+  border-radius: 50px;
   text-align: center;
   margin-left: 5%;
+  color: white;
 }
