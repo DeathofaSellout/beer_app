@@ -52,7 +52,5 @@ beer_data = [
 
   }
 ]
+
 beers = Beer.create(beer_data)
-
-
-
