@@ -21,9 +21,9 @@ class UsersController < ApplicationController
   def show
     id = params[:id]
     @user = User.find_by_id(id)
-    @beer = Beer.all
+    @beers = Beer.all
     if(@user.id != session[:user_id])
-      redirect_to root_path
+
     end
   end
 
