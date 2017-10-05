@@ -3,7 +3,6 @@ class BeersController < ApplicationController
 	def index
 		@q = Beer.ransack(params[:q])
 		@beers = @q.result(distinct: true)
- 		@beer = Beer.new
   end
 
 	def create
