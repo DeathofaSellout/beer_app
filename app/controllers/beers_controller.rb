@@ -1,9 +1,11 @@
 class BeersController < ApplicationController
 
 	def index
-		@beers = Beer.all
+		@q = Beer.ransack(params[:q])
+		@beers = @q.result(distinct: true)
+ 		@beer = Beer.new
   end
-	
+
 	def create
 	  @beer = Beer.new(validate_beer)
 	  if @beer.save
