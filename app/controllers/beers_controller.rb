@@ -1,14 +1,9 @@
 class BeersController < ApplicationController
 
 	def index
-	  @q = Beer.ransack(params[:q])
-	  @beers = @q.result(distinct: true)
-		@beer = Beer.new
-		#@user = User.find_by_id(id)
-    # if(@user.id != session[:user_id])
-    #   fail
-    # end
+		@beers = Beer.all
   end
+	
 	def create
 	  @beer = Beer.new(validate_beer)
 	  if @beer.save
