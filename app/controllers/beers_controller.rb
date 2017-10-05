@@ -9,7 +9,7 @@ class BeersController < ApplicationController
 	def create
 	  @beer = Beer.new(validate_beer)
 	  if @beer.save
-		  redirect_to '/beers'
+		  redirect_to beers_path
 	  end
 	end
 
