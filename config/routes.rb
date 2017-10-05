@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get    '/login', to: 'sessions#create'
   get    '/logout', to: 'sessions#destroy'
 
-  post   '/beers', to: 'beers#create'
-  get    '/beers', to: 'beers#index'
+  post   '/beers', to: 'beers#create', as: 'beer_create'
+  get    '/beers', to: 'beers#index', as: 'beers'
 
 end

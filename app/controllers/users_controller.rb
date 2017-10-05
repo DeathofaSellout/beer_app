@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by_id(session[:user_id])
     @user.update_attributes(user_params)
+    # doesn't check for successful saving
     redirect_to user_path(@user)
   end
 
@@ -23,9 +24,6 @@ class UsersController < ApplicationController
     id = params[:id]
     @user = User.find_by_id(id)
     @beers = Beer.all
-    # if(@user.id != session[:user_id])
-    #
-    # end
   end
 
   private
