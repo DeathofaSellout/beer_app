@@ -22,9 +22,9 @@ class UsersController < ApplicationController
     id = params[:id]
     @user = User.find_by_id(id)
     @beers = Beer.all
-    if(@user.id != session[:user_id])
-
-    end
+    # if(@user.id != session[:user_id])
+    #
+    # end
   end
 
   private
