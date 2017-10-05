@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
   end
+
   def update
     @user = User.find_by_id(session[:user_id])
     @user.update_attributes(user_params)
@@ -23,9 +24,6 @@ class UsersController < ApplicationController
     id = params[:id]
     @user = User.find_by_id(id)
     @beers = Beer.all
-    # if(@user.id != session[:user_id])
-    #
-    # end
   end
 
   private
