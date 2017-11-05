@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:3000/users/15 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>BeerApp</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="CgmMc5TBkjOQTL0n1/Vj7bdJKPExTrpOG0W31fVkkIaSHVLhSKSSm03s2VkFTc53HfA6IPxtbYyIXDa9PEsl2A==">
+
+    <link rel="stylesheet" media="all" href="./BeerApp_files/beers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BeerApp_files/ratings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BeerApp_files/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BeerApp_files/users.self-cdd344d8fe8efb04f6aa8a41f2bf24f63280f0eebed83e6ecee707bf896dff00.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BeerApp_files/application.self-941a48b4c4aefb65833c1ea0df09409f7df40a7df5be85857a94551420cb472f.css" data-turbolinks-track="reload">
+    <script src="./BeerApp_files/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/beers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/ratings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/initial.self-a93c872995e42c5b8c04edb56629dfeaa7ef6909e809f29f3a42c26b73a91f85.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/jquery.easing.1.4.self-1861f2a13696f306fd66ca3f06690cee8dbe0043cf4d5766f2a46207f1e66093.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/animation.self-544532c6613fb875a241de39ee1caa7e5a8828babe81173346df1b035a1c5cc2.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/velocity.min.self-88e63c17d79a0a43060e1e5893cf44e912a8554511b7c812d8bd5874cf962bfc.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/hammer.min.self-e34aebdc152f24d554cde579fd08f6bc8989093a40be08daac3b8ab73f7476ab.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/jquery.hammer.self-058ad89096dc19ff0acdee608d6b76da125f2c2eac2b534f9ee1129445d2dee0.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/global.self-d930e5295ff5eeec691c7b50e01531d0b8833d4c783185934a7c3e0338bb829c.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/collapsible.self-fdf41d8be8baa05abaa6e46fb5bb5299ad64008e59e531fada20f980960a32d1.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/dropdown.self-139eb5e39a9e6a0fdda1781bc8e397d355006eec30145614b35f626590303e86.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/modal.self-c5a9d3dcfeee46976a2297f21454e667e25b55568a576295fa456c25dc2e6da7.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/materialbox.self-806b88f7429987c13862e84ba948ed8fc2d3500bb8a8d07f95c875d3718fb109.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/parallax.self-1f02a9ea7d247347b376032b1a4d8651c2decd4d3346b9f740f536b16dd5b801.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/tabs.self-378b7d22045d9862814f4d7e9bc53f9fe7e4645955cbc6370e3601d1dddcfade.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/tooltip.self-0a88afb5932c1cfed4ff948897b0984fa50c9aa648786098568b57924fbee6a7.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/waves.self-ed24cac84d0f66808ff978810735b871f814c2bcf592cf9ccdf6b2bcdf8f5ba7.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/toasts.self-91859a18d500640df9116a39e9ce6187c9c41e643fb7cbba84d8f8f3f4b59d29.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/sideNav.self-8b2e60a863b1c3a3237184368e324c49ac2dbc81adf6c1f77ff8eeb740da108a.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/scrollspy.self-f96ac4ee16300b3cf0f07cedea0939bda2041c2904e9486891100d2e95c71d89.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/forms.self-ba1803824f0ac0ca65402822dda01d73089f8a42fc1c980f5c2787ebd64f8b8d.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/slider.self-b8512b10d3b81daf5d087a944ece5992a55f1ccc1dc6bc997eb9a49de8dbb8ca.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/cards.self-f16edb4fd2c25228dc8fdd9b83ce1b7e0bb7c0dafaea90e749c63995392ff4d0.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/chips.self-6dbc7b461eb0a16950fda4c8985e0b2571981e4243d181765a9d4b175c2d7765.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/pushpin.self-ed1452403a25a5ad10793d1cf1fe872ae5291ca66546e25a89f4d89ecc8bc37a.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/buttons.self-8509e11f3494625ed059bc2ae0e0970a07ebc12863e54e5be448d2f166469525.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/transitions.self-8504ce5ff296c8c8119fbf80bd1c22cf7c4069479608e79d45e890305ce083e2.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/scrollFire.self-d00940e53d10b9e85a5b6dc3ea869da2f0bc923dcbcfddf0ceaf7a20a62d54a0.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/picker.self-fc661e33adcdc2b1c3bc7940ab322786024c014ec63b434566267ff5ff8318bc.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/picker.date.self-b1d00a3d65b3b4a328888ecf08c2d46e913699bfb367858b4141689c6942f4c7.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/picker.time.self-17ff79f6d082457a5e8e2662a6b6bc3083962460f4e321b7b2abc32d198ca704.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/character_counter.self-6e7c4e013fcd539576ed3165fbde0c4db9adc550244fea91cde05a0ff94a5028.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/carousel.self-a6cffcb3ca5e4efe5b9ee21905ac5a0a70e725463bd592e3fd7644aeda9e3474.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/tapTarget.self-73dee84356337136b58eb5418ace519ab2e59464dbdff2dc9210023b82a5eb10.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/materialize-sprockets.self-b9b07dd4e7718454476f04edeb935022ae4f4d90934ab7ce913ff20c8baeb399.js" data-turbolinks-track="reload"></script>
+<script src="./BeerApp_files/application.self-b5676d6c1ab5f965eeadefc0f44b4903ec97a05286d76079de418c5210dba645.js" data-turbolinks-track="reload"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:3000/assets/beer-c9ccdab9989a0924551651c5b79a45215aed9ed0a7844f624dadbbe1ab961adf.ico">
+  </head>
+  
+  <body cz-shortcut-listen="true">
+
+    
+<nav>
+  <div class="nav-wrapper">
+    <a href="http://localhost:3000/users/15#" class="brand-logo left">Logo</a>
+    <ul id="nav-mobile" class="right">
+      <!--  -->
+        <li><a class="btn-flat" href="http://localhost:3000/users/15">Profile Page</a></li>
+      <!--  -->
+      <li><a class="btn-flat" href="http://localhost:3000/logout">Log out</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div>
+
+
+  <h1>Hi dude!</h1>
+
+</div>
+
+<!-- <div class="beer-list">
+
+</div> -->
+
+
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn modal-trigger" href="http://localhost:3000/users/15#modal3">Modal</a>
+
+<!-- Modal Structure -->
+<div id="modal3" class="modal" style="z-index: 1003;">
+  <div class="modal-content">
+
+   <form class="new_beer" id="new_beer" action="http://localhost:3000/beers" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="CgmMc5TBkjOQTL0n1/Vj7bdJKPExTrpOG0W31fVkkIaSHVLhSKSSm03s2VkFTc53HfA6IPxtbYyIXDa9PEsl2A==">
+   <div class="row">
+    <div class="input-field col s12">
+
+      <input type="text" name="beer[style]" id="beer_style">
+      <label for="beer_style">Style</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+     <input type="text" name="beer[brewery]" id="beer_brewery">
+     <label for="beer_brewery">Brewery</label>
+   </div>
+ </div>
+ <div class="row">
+  <div class="input-field col s12">
+
+    <input type="text" name="beer[country]" id="beer_country">
+    <label for="beer_country">Country</label>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col s12">
+    This is an inline input field:
+    <div class="input-field inline">
+      <input type="text" name="beer[ibu]" id="beer_ibu">
+      <label for="beer_ibu">Ibu</label>
+    </div>
+    <div class="input-field inline">
+     <input type="text" name="beer[abv]" id="beer_abv">
+     <label for="beer_abv">Abv</label>
+   </div>
+   <div class="input-field inline">
+     <input type="text" name="beer[image]" id="beer_image">
+     <label for="beer_image">Image</label>
+   </div>
+   <div class="modal-footer">
+  <input type="submit" name="commit" value="submit" class="btn-flat" data-disable-with="submit">
+</div>
+ </div>
+</div>
+
+</form></div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="beer_list">
+
+
+</div>
+
+  
+
+<div class="hiddendiv common"></div></body></html>
